@@ -13,7 +13,9 @@ int main(int argc, char *argv[])
     {
         char letra_actual;
         int posicion_actual=0;
+        
         int cantidad_de_caracteres=strlen(argv[1]);
+        
         char vector_letras[cantidad_de_caracteres];
         int vector_cantidad_letras[cantidad_de_caracteres];
 
@@ -39,14 +41,13 @@ int main(int argc, char *argv[])
                 {
                     vector_cantidad_letras[posicion_actual]+=1;
                 }
-
             }
         }
+        
         for(int posicion_muestral=0; posicion_muestral<strlen(vector_letras); posicion_muestral++)
         {
-            printf("%c %i\n", vector_letras[posicion_muestral], vector_cantidad_letras[posicion_muestral]);
+            printf("%c%i ", vector_letras[posicion_muestral], vector_cantidad_letras[posicion_muestral]);
         }
     }
-
     return 0;
 }
