@@ -1,6 +1,11 @@
-Pregunta 3:¿?
+Pregunta 3:¿Que es la exclusion mutua?
 
 Respuesta:
+Consiste en un apartado de concurrencia, en el cual la cola de procesos es despejada para que un solo proceso este operando 
+en ese instante.
+
+Esto se con la finalidad de para preservar la integridad del sistema, ya que ese proceso (por norma general) interactua con 
+recursos compartidos (recursos criticos para el funcionamiento del sistema).
 
 
 Pregunta 4:¿Que es un socket?
