@@ -1,3 +1,11 @@
-SELECT *
-FROM
-WHERE
+SELECT name as 'Nombre Curso', start_date as 'Fecha de Inicio del curso', avg(score) as 'Promedio del Curso', STDEV(score) as 'Desv. Est.',MIN(score) as 'Minimo', MAX(score) as 'Maximo' 
+
+FROM evaluations, students, courses, exams
+
+GROUP BY code, start_date
+
+WHERE courses_pk=course_fk 
+AND students_fk=students_pk 
+AND exams_fk=exams_pk
+
+GO
